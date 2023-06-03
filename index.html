@@ -57,7 +57,9 @@
       <section class="main-block">
         <div class="container">
           <h1 class="main-text">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-          <button type="button" class="order-button">Zamów usługe</button>
+          <button type="button" class="order-button" data-modal-open>
+            Zamów usługe
+          </button>
         </div>
       </section>
 
@@ -121,6 +123,7 @@
           <h2 class="secondary-heading">Czym się zajmujemy</h2>
           <ul>
             <li>
+              <div class="our-work-imgtext"><p>APLIKACJE KOMPUTEROWE</p></div>
               <img
                 src="images/img_1.jpg"
                 alt="hands on keyboard"
@@ -129,6 +132,7 @@
               />
             </li>
             <li>
+              <div class="our-work-imgtext"><p>APLIKACJE MOBILNE</p></div>
               <img
                 src="images/img_2.jpg"
                 alt="smartphone in hands"
@@ -137,6 +141,7 @@
               />
             </li>
             <li>
+              <div class="our-work-imgtext"><p>ROZWIĄZANIA GRAFICZNE</p></div>
               <img
                 src="images/img_3.jpg"
                 alt="creating image on smartphone"
@@ -439,5 +444,11 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-button" data-modal-close>X</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
