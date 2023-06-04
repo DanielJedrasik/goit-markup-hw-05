@@ -61,24 +61,13 @@ a {
   margin: 0 auto;
   padding: 0 15px;
 }
-.header-navigation a,
-.team-socialmedia a,
-.order-button,
-.our-clients a,
-.footer-svg li,
-.footer-styles a,
-.filter-buttons button,
-.portfolio-images-position li {
-  transition-property: color, fill, background-color, box-shadow;
+.header-navigation a {
+  transition-property: color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .website-navigation a.current {
   color: var(--blue-color);
-}
-.order-button:hover,
-.order-button:focus {
-  background-color: var(--blue-color);
 }
 .header-navigation a:hover,
 .header-navigation a:focus,
@@ -190,7 +179,6 @@ a.current::after {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  /* identical to box height, or 188% */
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
@@ -201,49 +189,13 @@ a.current::after {
   margin: 0 auto;
   padding: 10px 41px;
   margin-top: 30px;
-}
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.2);
-  display: flex;
-  visibility: visible;
-  opacity: 1;
-  transform: scale(1);
-  transition-property: visibility, opacity, transform;
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal {
-  position: relative;
-  width: 528px;
-  height: 581px;
-  background: var(--main-white-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  text-align: center;
-  margin: auto;
-}
-.is-hidden {
-  visibility: hidden;
-  pointer-events: none;
-  opacity: 0;
-  transform: scale(0);
-}
-.modal-button {
-  position: absolute;
-  top: 8px;
-  left: 490px;
-  width: 30px;
-  height: 30px;
-  color: var(--black-color);
-  background-color: var(--main-white-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
+.order-button:hover,
+.order-button:focus {
+  background-color: var(--blue-color);
 }
 .informations-header {
   font-weight: 700;
@@ -298,17 +250,16 @@ a.current::after {
   width: 370px;
   height: 70px;
   background: rgba(47, 48, 58, 0.8);
-  top: 224px;
-}
-.our-work-imgtext p {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-white-color);
-  padding: 27px 90px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .our-team {
   background-color: var(--team-section-color);
@@ -341,6 +292,9 @@ a.current::after {
   border-radius: 50%;
   color: var(--main-white-color);
   fill: var(--icon-socialmedia-color);
+  transition-property: fill, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .our-team ul.team-socialmedia {
   gap: 10px;
@@ -386,6 +340,9 @@ a.current::after {
   border: 1px solid currentColor;
   border-radius: 4px;
   color: var(--icon-socialmedia-color);
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .our-clients a:hover,
 .our-clients a:focus {
@@ -402,6 +359,9 @@ a.current::after {
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--main-white-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contacts {
   font-size: 14px;
@@ -412,15 +372,24 @@ a.current::after {
 }
 .footer-address {
   color: var(--main-white-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-number,
 .footer-mail {
   color: var(--footer-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-svg svg {
   width: 20px;
   height: 20px;
   fill: var(--main-white-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-svg-list {
   margin-top: 20px;
@@ -433,6 +402,9 @@ a.current::after {
   padding: 12px;
   border-radius: 50%;
   align-items: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-position {
   display: flex;
@@ -471,6 +443,9 @@ a.current::after {
   color: var(--body-text-color);
   background-color: var(--team-section-color);
   padding: 6px 22px;
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-buttons button:hover,
 .filter-buttons button:focus {
@@ -517,6 +492,55 @@ a.current::after {
   width: 370px;
   height: 294px;
 }
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  transition-property: visibility, opacity, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal {
+  position: relative;
+  width: 528px;
+  height: 581px;
+  background: var(--main-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  text-align: center;
+  margin: auto;
+}
+.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0);
+}
+.modal-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  color: var(--black-color);
+  background-color: var(--main-white-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 6px;
+  justify-content: center;
+}
+.modal-button svg {
+  width: 18px;
+  height: 18px;
+}
 .portfolio-overlay-box {
   position: absolute;
   width: 370px;
@@ -536,6 +560,9 @@ a.current::after {
 }
 .portfolio-images-position li {
   max-width: 370px;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-underimage-text {
   padding: 20px 24px;
@@ -544,7 +571,6 @@ a.current::after {
 }
 .portfolio-images-position li:hover,
 .portfolio-images-position li:focus {
-  border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
