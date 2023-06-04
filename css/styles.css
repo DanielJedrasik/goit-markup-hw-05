@@ -124,7 +124,7 @@ a.current::after {
   display: block;
   position: absolute;
   margin-top: 29px;
-  width: 58px;
+  width: 56px;
   height: 4px;
   background-color: var(--blue-color);
   border: 2px;
